@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!-- La declaración !DOCTYPE html especifica la versión de HTML utilizada en el documento, en este caso, HTML5. -->
+<html lang="en">
+<!--  El elemento <html> es el contenedor raíz de todo el contenido de una página web. El atributo lang="en" especifica el idioma principal del contenido, en este caso, inglés.-->
+
+<head>
+    <!--  La sección  proporciona metadatos y enlaces a recursos externos como hojas de estilo y fuentes. -->
+    <meta charset="UTF-8">
+    <!-- especifica el conjunto de caracteres utilizado, que en este caso es UTF-8, que incluye la mayoría de los caracteres comunes. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define cómo el contenido se ajusta al ancho de la pantalla y el nivel de zoom inicial.  -->
+     <!-- Define el título de la página que se mostrará en la pestaña del navegador. -->
+    <link rel="shortcut icon" href="./images/Simple Logo and Favicon (Community).png" type="images/x-icon">
+    <!-- Especifica el icono que se mostrará en la pestaña del navegador.  -->
+    <link rel="stylesheet" href="./css/normalize.css"> <!--  Vinculan las hojas de estilo externas al documento. -->
+    <link rel="stylesheet" href="./css/estilos.css"> <!-- Vinculan las hojas de estilo externas al documento. -->
+
+    <!-- Primary Meta Tags -->
+<title>Prototipo Marketing</title>
+<meta name="title" content="Prototipo de página web de marketing" />
+<meta name="description" content="Este es un proyecto que hice para probar mis habilidades en HTML, CSS y JS." />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ronalRD19.github.io" />
+<meta property="og:title" content="Prototipo de página web de marketing" />
+<meta property="og:description" content="Este es un proyecto que hice para probar mis habilidades en HTML, CSS y JS." />
+<meta property="og:image" content="https:/ronalRD19.github.io/images/web.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://ronalRD19.github.io" />
+<meta property="twitter:title" content="Prototipo de página web de marketing" />
+<meta property="twitter:description" content="Este es un proyecto que hice para probar mis habilidades en HTML, CSS y JS." />
+<meta property="twitter:image" content="https:/ronalRD19.github.io/images/web.jpg" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
+</head>
+
+<body>
+    <!-- Contiene todo el contenido visible de la página. -->
+    <header class="hero">
+        <!-- Define la cabecera de la página con la clase hero, que probablemente se usará para aplicar estilos específicos. Representa una sección introductoria o un grupo de contenido introductorio. En este caso, se utiliza para definir la cabecera de la página.  -->
+        <nav class="nav container">
+            <!-- Define la barra de navegación con las clases nav y container. "nav" Define una sección de navegación en el documento. Se utiliza para contener enlaces de navegación. -->
+
+            <div class="nav__logo">
+                <!-- div  Representa un contenedor genérico que no representa ningún significado  -->
+                <h2 class="nav__title">Marketing
+
+                </h2>
+                <!-- Representan encabezados de sección. <h1> es el más importante y generalmente se utiliza para el título principal de la página, mientras que <h2> se utiliza para encabezados secundarios. -->
+            </div>
+            <ul class="nav__link nav__link--menu">
+                <!-- ul  Define una lista desordenada, que es una lista de elementos no ordenados. -->
+                <li class="nav__items">
+                    <!-- li Representa un elemento de una lista, ya sea ordenada o desordenada -->
+                    <a href="#" class="nav__links">Inicio</a>
+                    <!--a Define un hipervínculo. El atributo href especifica la URL a la que enlaza el enlace -->
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+                <img src="./images/close.svg" alt="fondo" class="nav__close">
+                <!-- Define una imagen. El atributo src especifica la URL de la imagen y el atributo alt proporciona un texto alternativo para la imagen.  -->
+            </ul>
+            <div class="nav__menu">
+                <img src="./images/menu.svg" alt="menu" class="nav__img">
+            </div>
+        </nav>
+        <section class="hero__container container">
+            <!-- Define una sección con la clase hero__container y container.  Define una sección en un documento. Se utiliza para agrupar contenido relacionado. -->
+            <h1 class="hero__title">Lorem ipsum dolor sit.</h1>
+            <!--   Representan encabezados de sección. <h1> es el más importante y generalmente se utiliza para el título principal de la página, mientras que <h2> se utiliza para encabezados secundarios.  -->
+            <p class="hero__paragraph">20-Comenzaremos a darle forma al sitio web, comenzamos con la estuctura para ello
+                iniciamos con la etiqueta de header con la clase hero ya que sera la seccion hero de la pagina. Dentro
+                de la etiqueta header creamos la etiqueta nav.</p> <!-- <p>: Define un párrafo de texto.  -->
+            <a href="#" class="cta">Comienza ahora</a>
+        </section>
+
+
+
+
+    </header>
+
+    <main>
+        <!-- La etiqueta principal que envuelve todo el contenido principal de la página. -->
+        <section class="container about">
+            <!-- Una sección que contiene información "acerca de" algo, con una clase para estilizar el contenedor. -->
+            <h2 class="subtitle">Lorem ipsum dolor sit.</h2>
+            <!-- Un título secundario que describe el contenido que se va a presentar en esta sección. -->
+            <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo illum
+                provident amet?</p>
+            <!-- Un párrafo que proporciona información más detallada sobre el tema presentado en esta sección. -->
+
+            <div class="about__main">
+                <!-- Un contenedor principal para los elementos principales "about". -->
+                <article class="about__icons">
+                    <!-- Un artículo que contiene iconos o imágenes relacionadas con el tema "about". -->
+                    <img src="/images/shapes.svg" alt="Shapes" class="about__icon">
+                    <!-- Una imagen que representa un elemento específico relacionado con el tema "about". -->
+                    <h3 class="about__title">lorem</h3>
+                    <!-- Un título que describe el contenido relacionado con el icono o la imagen. -->
+                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+
+                        temporibus ab dolorum pariatur!</p>
+                    <!-- Un párrafo que proporciona información adicional sobre el tema relacionado con el icono o la imagen. -->
+                </article>
+                <article class="about__icons">
+                    <img src="/images/paint.svg" alt="paint" class="about__icon">
+                    <h3 class="about__title">lorem</h3>
+                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+                        temporibus ab dolorum pariatur!</p>
+                </article>
+                <article class="about__icons">
+                    <img src="/images/code.svg" alt="code" class="about__icon">
+                    <h3 class="about__title">lorem</h3>
+                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+                        temporibus ab dolorum pariatur!</p>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="knowledge">
+            <!-- Una sección que contiene información de conocimiento o datos relevantes. -->
+            <div class="knowledge__container container">
+                <!-- Un contenedor que alberga todo el contenido de conocimiento, con una clase adicional para estilizarlo. -->
+                <div class="knowledege__texts">
+                    <!-- Un contenedor para el texto relacionado con el conocimiento. -->
+                    <h2 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, sequi debitis.
+                    </h2>
+                    <!-- Un título secundario que describe el contenido de conocimiento presentado en esta sección. -->
+                    <p class="knowledge__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                        temporibus possimus neque blanditiis, doloribus velit fugit labore recusandae dolorum beatae
+                        sapiente sed omnis quaerat eaque deserunt, consequatur alias, voluptas quidem.</p>
+                    <!-- Un párrafo que proporciona información más detallada sobre el tema presentado en esta sección. -->
+                    <a href="#" class="cta">Lorem, ipsum dolor.</a>
+                    <!-- Un enlace de llamada a la acción que posiblemente lleve a más información o a una página relacionada. -->
+                </div>
+                <figure class="knowledge__picture">
+                    <!-- Una figura que contiene una imagen relacionada con el contenido de conocimiento. -->
+                    <img src="/images/Macbook.png" alt="mack" class="knowledge__img">
+                    <!-- Una imagen de un Macbook con un atributo alt para accesibilidad. -->
+                </figure>
+            </div>
+        </section>
+
+        <section class="price container">
+            <!-- Una sección que presenta diferentes precios o planes. -->
+            <h2 class="subtitle">Lorem ipsum dolor sit amet consectetur.</h2>
+            <!-- Un título secundario que describe el contenido de precios presentado en esta sección. -->
+
+            <div class="price__table">
+                <!-- Una tabla que contiene los elementos de precios y características. -->
+                <div class="price__element">
+                    <!-- Un elemento de precio que representa una opción de nivel básico. -->
+                    <p class="price__name">lorem</p> <!-- El nombre o título del plan de precios. -->
+                    <h3 class="price__price">Free</h3> <!-- El precio de este plan específico. -->
+                    <div class="price__items">
+                        <!-- Una lista de características incluidas en este plan de precios. -->
+                        <p class="price__features">lorem</p> <!-- Una característica específica del plan. -->
+                        <p class="price__features">lorem</p> <!-- Una característica específica del plan. -->
+                        <p class="price__features">lorem</p> <!-- Una característica específica del plan. -->
+                    </div>
+                    <a href="#" class="price__cta">Lorem, ipsum.</a>
+                    <!-- Un enlace de llamada a la acción que posiblemente lleve a más información o a una página de compra. -->
+                </div>
+
+                <div class="price__element price__element--best">
+                    <p class="price__name">lorem</p>
+                    <h3 class="price__price">$10/mes</h3>
+
+                    <div class="price__items">
+                        <p class="price__features">lorem</p>
+                        <p class="price__features">lorem</p>
+                        <p class="price__features">lorem</p>
+                    </div>
+                    <a href="#" class="price__cta">Lorem, ipsum.</a>
+                </div>
+
+
+                <div class="price__element">
+                    <p class="price__name">lorem</p>
+                    <h3 class="price__price">$50/mes</h3>
+                    <div class="price__items">
+                        <p class="price__features">lorem</p>
+                        <p class="price__features">lorem</p>
+                        <p class="price__features">lorem</p>
+
+
+                    </div>
+                    <a href="#" class="price__cta">Lorem, ipsum.</a>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </section>
+
+        <section class="testimony">
+            <!--  <section class="testimony">: Esta etiqueta define una sección que contiene testimonios de diferentes usuarios o clientes. Se utiliza para agrupar y organizar testimonios en una página web. -->
+                <video autoplay muted loop id="video1">
+                    <source src="./videos/sliders2.mp4" type="video/mp4">
+                  </video>
+            <div class="testimony__container container">
+                <!-- <div class="testimony__container container">: Aquí se crea un contenedor para los testimonios. La clase container parece ser un contenedor genérico que establece un ancho específico y posiblemente otros estilos. La clase testimony__container se utiliza para dar estilo específico al contenedor de testimonios.  -->
+                <img src="/images/leftarrow.svg" alt="left" class="testimony__arrow" id="before">
+                <!-- <img src="/images/leftarrow.svg" alt="left" class="testimony__arrow" id="before">: Esta etiqueta <img> se utiliza para incrustar una imagen de flecha apuntando hacia la izquierda. La imagen tiene una ruta especificada en el atributo src y se usa como un elemento visual para navegar a los testimonios anteriores.  -->
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <!-- <section class="testimony__body testimony__body--show" data-id="1">: Este elemento section representa el cuerpo de un testimonio particular. La clase testimony__body se utiliza para dar estilo al cuerpo del testimonio. La clase adicional testimony__body--show podría ser una clase de control que muestra este testimonio en particular. El atributo data-id podría estar relacionado con la identificación de este testimonio en la base de datos o en la lógica del código.-->
+                    <div class="testimony__texts">
+                        <!-- <div class="testimony__texts">: Esta etiqueta <div> es un contenedor genérico utilizado para agrupar contenido relacionado. En este caso, la clase testimony__texts se utiliza para aplicar estilos específicos a este bloque de texto dentro de la sección de testimonios.  -->
+                        <h2 class="subtitle"> Mi nombre es Lorem ipsum dolor sit amet. <span
+                                class="testimony__course">Lorem, ipsum
+                                dolor.</span></h2>
+                        <!--  <h2 class="subtitle">: Esta etiqueta <h2> es un encabezado de nivel 2 que se utiliza para títulos o encabezados. La clase subtitle se utiliza para aplicar estilos específicos al texto del encabezado, como el tamaño de la fuente, el color y el espaciado. <span class="testimony__course">: La etiqueta <span> se utiliza para aplicar estilos específicos a partes individuales del texto dentro de un elemento. La clase testimony__course se utiliza para aplicar estilos específicos a esta sección del texto. -->
+                        <p class="testimony__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas
+                            sapiente pariatur inventore praesentium, vel ex dolorem sit quaerat! Minima.</p>
+                        <!--  <p class="testimony__review">: La etiqueta <p> se utiliza para párrafos de texto. La clase testimony__review se utiliza para aplicar estilos específicos a este párrafo, como el tamaño de la fuente, el color y el espaciado.  -->
+                    </div>
+                    <figure class="testimony__picture">
+                        <!-- <figure class="testimony__picture">: Aquí se crea un contenedor para la imagen que se muestra junto al testimonio. La clase testimony__picture se utiliza para aplicar estilos específicos a la imagen del testimonio.   -->
+                        <img src="/images/face.jpg" alt="face" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <!--  -->
+                        <h2 class="subtitle">Mi nombre es Laura perez <span class="testimony__course">Lorem, ipsum
+                                dolor.</span></h2> <!--  -->
+                        <p class="testimony__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas
+                            sapiente pariatur inventore praesentium, vel ex dolorem sit quaerat! Minima.</p> <!--  -->
+                    </div><!--  -->
+                    <figure class="testimony__picture">
+                        <!--  -->
+                        <img src="/images/face2.jpg" alt="face" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body " data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Mario ramos. <span class="testimony__course">Lorem, ipsum
+                                dolor.</span></h2>
+                        <p class="testimony__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas
+                        </p>
+                    </div>
+                    <figure class="testimony__picture">
+                        <img src="/images/face3.jpg" alt="face" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body " data-id="4">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Carlo Duran. <span class="testimony__course">Lorem, ipsum
+                                dolor.</span></h2>
+                        <p class="testimony__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas
+                        </p>
+                    </div>
+                    <figure class="testimony__picture">
+                        <img src="/images/face4.jpg" alt="face" class="testimony__img">
+                    </figure>
+                </section>
+                <img src="/images/rigtharrow.svg" alt="right" class="testimony__arrow" id="next">
+            </div>
+
+
+        </section>
+
+
+        <section class="questions container">
+            <!--  <section class="questions container">: La etiqueta <section> se utiliza para agrupar contenido relacionado en una sección específica de una página web. La clase container se utiliza para definir un contenedor que limita el ancho de la sección y la centra en la página. -->
+            <h2 class="sustitle">Preguntas frecuentes.</h2>
+            <!--  <h2 class="sustitle">: Esta etiqueta <h2> se utiliza para definir un encabezado de nivel 2 con el texto "Preguntas frecuentes". La clase sustitle se utiliza para aplicar estilos específicos a este encabezado, como el tamaño de la fuente, el color y el espaciado. -->
+            <p class="questions__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,
+                molestias.</p>
+            <!--  <p class="questions__paragraph">: La etiqueta <p> se utiliza para definir un párrafo de texto con el contenido "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, molestias.". La clase questions__paragraph se utiliza para aplicar estilos específicos a este párrafo.  -->
+
+            <section class="questions__container">
+                <!-- <section class="questions__container">: Esta etiqueta <section> se utiliza para agrupar contenido relacionado en una sección específica de preguntas y respuestas. La clase questions__container se utiliza para aplicar estilos específicos a este contenedor.  -->
+                <article class="questions__padding">
+                    <!-- <article class="questions__padding">: La etiqueta <article> se utiliza para definir contenido independiente y autónomo que puede existir por sí mismo. La clase questions__padding se utiliza para aplicar estilos específicos a este artículo, como relleno y márgenes.  -->
+                    <div class="questions__answer">
+                        <!--  <div class="questions__answer">: La etiqueta <div> se utiliza como un contenedor genérico para agrupar contenido relacionado. La clase questions__answer se utiliza para aplicar estilos específicos a este bloque de respuestas. -->
+                        <h3 class="questions__title">¿Que es lorem?
+                            <span class="questions__arrow">
+                                <!--  <span class="questions__arrow">: La etiqueta <span> se utiliza para aplicar estilos específicos a partes individuales del texto. La clase questions__arrow se utiliza para aplicar estilos específicos a este bloque de flechas. -->
+                                <img src="./images/arrow.svg" alt="arrow" class="questions__img">
+                                <!-- <img src="./images/arrow.svg" alt="arrow" class="questions__img">: La etiqueta <img> se utiliza para mostrar una imagen en la página web. Se utiliza la clase questions__img para aplicar estilos específicos a la imagen. -->
+                            </span>
+                        </h3>
+                        <!-- <h3 class="questions__title">: La etiqueta <h3> se utiliza para definir un encabezado de nivel 3 para el título de la pregunta. La clase questions__title se utiliza para aplicar estilos específicos a este encabezado.  -->
+                        <p class="questions__show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut dolor
+                            eveniet tempore facilis minima laborum est distinctio magnam reiciendis, hic culpa dolore
+                            voluptate vel, cum incidunt provident ipsa perferendis ratione nemo aliquam quae officiis!
+                            Iure maiores nostrum unde, sit quia iusto harum, eaque veritatis praesentium id eius
+                            cupiditate voluptas?.</p>
+                        <!-- <p class="questions__show">: La etiqueta <p> se utiliza para definir un párrafo de texto con la respuesta a la pregunta planteada. La clase questions__show se utiliza para aplicar estilos específicos a este párrafo.  -->
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Que es lorem?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" alt="arrow" class="questions__img">
+                            </span>
+                        </h3>
+                        <p class="questions__show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut dolor
+                            eveniet tempore facilis minima laborum est distinctio magnam reiciendis, hic culpa dolore
+                            voluptate vel, cum incidunt provident ipsa perferendis ratione nemo aliquam quae officiis!
+                            Iure maiores nostrum unde, sit quia iusto harum, eaque veritatis praesentium id eius
+                            cupiditate voluptas?.</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Que es lorem?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" alt="arrow" class="questions__img">
+                            </span>
+                        </h3>
+                        <p class="questions__show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut dolor
+                            eveniet tempore facilis minima laborum est distinctio magnam reiciendis, hic culpa dolore
+                            voluptate vel, cum incidunt provident ipsa perferendis ratione nemo aliquam quae officiis!
+                            Iure maiores nostrum unde, sit quia iusto harum, eaque veritatis praesentium id eius
+                            cupiditate voluptas?.</p>
+                    </div>
+                </article>
+            </section>
+
+<section class="questions__offer">
+<h2 class="subtitle">¿Estas listo para aprender?</h2>
+<p class="questions__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero natus cumque voluptas quaerat, asperiores rem blanditiis quod voluptate deserunt quas perferendis at unde distinctio veritatis?</p>
+<a href="#" class="cta">Contrata ahora</a>
+
+</section>
+
+
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <video autoplay muted loop id="video2">
+            <source src="./videos/footer.mp4" type="video/mp4">
+          </video>
+        
+        
+<section class="footer__container container">
+    
+<nav class="nav nav--footer">
+    <h2 class="footer__title">Marketing</h2>
+    <ul class="nav__link nav__link--footer">
+        <li class="nav__items">
+            <!-- li Representa un elemento de una lista, ya sea ordenada o desordenada -->
+            <a href="#" class="nav__links">Inicio</a>
+            <!--a Define un hipervínculo. El atributo href especifica la URL a la que enlaza el enlace -->
+        </li>
+        <li class="nav__items">
+            <a href="#" class="nav__links">Acerca de</a>
+        </li>
+        <li class="nav__items">
+            <a href="#" class="nav__links">Contacto</a>
+        </li>
+        <li class="nav__items">
+            <a href="#" class="nav__links">Blog</a>
+        </li>
+
+    </ul>
+</nav>
+<form class="footer__form" action="https://formspree.io/f/mwkdjqdv"
+method="POST">
+    <h2 class="footer__newsletter">Suscribete</h2>
+    <div class="footer__inputs">
+        <input type="email" placeholder="Email" class="footer__input" name="email">
+        <input type="submit" value="Registrate" class="footer__submit">
+</div>
+</form>
+</section>
+
+<section class="footer__copy container">
+    <div class="footer__social">
+        <a href="#" class="footer__icons"> <img src="./images/facebook.svg" alt="Facebook" class="footer__img"></a>
+        <a href="#" class="footer__icons"> <img src="./images/twitter.svg" alt="Facebook" class="footer__img"></a>
+        <a href="#" class="footer__icons"> <img src="./images/youtube.svg" alt="Facebook" class="footer__img"></a>
+    </div>
+    <h3 class="footer__copyright"> Derechos reservados &copy; Ronald  Zambrano  </h3>
+</section>
+
+    </footer>
+    <script src="./Js/slider.js"></script>
+    <script src="./Js/questions.js"></script>
+    <script src="./Js/menu.js"></script>
+</body>
+
+</html>
+
+<!--  -->

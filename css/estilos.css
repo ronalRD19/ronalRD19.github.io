@@ -1,0 +1,980 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+ /*  Importación de una fuente de Google Fonts  Esta línea importa la fuente 'Poppins' de Google Fonts en pesos específicos (300, 400, 600, 700) y la configura para mostrar caracteres especiales correctamente.  */
+
+ :root {
+    /* Definición de variables CSS personalizadas  */
+    --padding-container: 100px 0;
+    /* Establece el relleno vertical de 100px y el relleno horizontal de 0 para los contenedores */
+    --color-title: #001A49;
+    /* Establece el color de título como un tono de azul oscuro */
+ }
+
+
+ body {
+    /* Aplicación de la fuente Poppins a todo el cuerpo del documento. Esta línea aplica la fuente 'Poppins' a todo el cuerpo del documento, con una fuente de respaldo de tipo sans-serif si 'Poppins' no está disponible. */
+    font-family: 'Poppins', sans-serif;
+    /* Si Poppins no está disponible, se usará una fuente genérica sans-serif */
+ }
+
+ .container {
+    /* Estilos para contenedor genérico. Estos estilos se aplican a elementos con la clase .container. Establecen el ancho del contenedor en el 90% del ancho del elemento primario, lo centran horizontalmente, ocultan cualquier contenido que se desborde y aplican el relleno definido por la variable --padding-container. */
+    width: 90%;
+    /* Establece el ancho del contenedor en el 90% del ancho del elemento primario */
+    max-width: 1200px;
+    /* Establece el ancho máximo del contenedor en 1200px */
+    margin: 0 auto;
+    /* Centra horizontalmente el contenedor en el elemento primario */
+    overflow: hidden;
+    /*  Oculta el contenido que exceda los límites del contenedor */
+    padding: var(--padding-container);
+    /* Aplica el relleno definido por la variable --padding-container */
+
+ }
+
+ .hero {
+    /* Estilos para la sección del hero */
+    width: 100%;
+    /* Establece el ancho de la sección del hero al 100% */
+    height: 100vh;
+    /* Establece la altura de la sección del hero al 100% de la altura de la ventana gráfica */
+    min-height: 600px;
+    /* Establece la altura mínima de la sección del hero en 600px */
+    max-height: 800px;
+    /* Establece la altura máxima de la sección del hero en 800px */
+    position: relative;
+    /* Establece la posición del elemento como relativa para permitir desplazamiento */
+    display: grid;
+    /* Establece el tipo de visualización del elemento como una cuadrícula */
+    grid-template-rows: 100px 1fr;
+    /* Establece el tamaño de fila de la cuadrícula para la sección del hero */
+    color: #fff;
+    /* Establece el color de texto para la sección del hero como blanco */
+ }
+
+ .hero::before {
+    /* Pseudo-elemento ::before para estilos adicionales en la sección del héroe */
+    content: "";
+    /* Establece el contenido del pseudo-elemento como vacío */
+    position: absolute;
+    /* Establece la posición del pseudo-elemento como absoluta con respecto al elemento principal */
+    top: 0;
+    /* Coloca el pseudo-elemento en la parte superior del elemento principal */
+    left: 0;
+    /* Coloca el pseudo-elemento en el borde izquierdo del elemento principal */
+    width: 100%;
+    /* Establece el ancho del pseudo-elemento al 100% del ancho del elemento principal */
+    height: 100%;
+    /* Establece la altura del pseudo-elemento al 100% de la altura del elemento principal */
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/computer.jpg);
+    /* Establece la imagen de fondo y un degradado en la sección del héroe */
+    background-size: cover;
+    /* Ajusta la imagen de fondo para cubrir el tamaño del elemento */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    /* Define una forma de recorte personalizada para el pseudo-elemento */
+    z-index: -1;
+    /* Establece la posición en el eje Z del pseudo-elemento para colocarlo detrás del contenido principal */
+ }
+
+
+ /* nav */
+
+ .nav {
+    /* Estilos para la barra de navegación */
+    --padding-container: 0;
+    /* Establece el relleno del contenedor en 0 */
+    height: 100%;
+    /* Establece la altura de la barra de navegación al 100% */
+    display: flex;
+    /* Establece la presentación de los elementos secundarios como una caja flexible */
+    align-items: center;
+    /* Alinea los elementos secundarios verticalmente en el centro */
+ }
+
+
+ .nav__title {
+    /* Estilos para el título de la barra de navegación */
+    font-weight: 300;
+    /* Establece el grosor de la fuente del título */
+ }
+
+
+ .nav__link {
+    /* Estilos para los enlaces de la barra de navegación */
+    margin-left: auto;
+    /* Establece un margen a la izquierda de los enlaces */
+    padding: 0;
+    /* Establece el relleno de los enlaces a 0 */
+    display: grid;
+    /* Establece la presentación de los enlaces como una cuadrícula */
+    grid-auto-flow: column;
+    /* Establece el flujo automático de la cuadrícula en columnas */
+    grid-auto-columns: max-content;
+    /* Establece el ancho de columna automático según el contenido máximo */
+    gap: 2em;
+    /* Establece el espacio entre las columnas */
+ }
+
+ .nav__items {
+    /* Estilos para los elementos de la barra de navegación */
+    list-style: none;
+    /* Elimina los marcadores de lista de los elementos */
+ }
+
+
+ .nav__links {
+    /* Estilos para los enlaces de la barra de navegación */
+    color: #fff;
+    /* Establece el color del texto de los enlaces como blanco */
+    text-decoration: none;
+    /* Elimina la decoración de texto de los enlaces */
+ }
+
+ .nav__menu {
+    /* Estilos para el menú de navegación */
+    margin-left: auto;
+    /* Establece un margen a la izquierda del menú */
+    cursor: pointer;
+    /* Cambia el cursor a un puntero cuando pasa sobre el menú */
+    display: none;
+    /* Oculta el menú de navegación */
+ }
+
+
+ .nav__img {
+    /* Estilos para la imagen de la barra de navegación */
+    display: block;
+    /* Establece la presentación de la imagen como bloque */
+    width: 30px;
+    /* Establece el ancho de la imagen en 30px */
+ }
+
+
+ .nav__close {
+    /* Estilos para el cierre de la barra de navegación */
+    display: var(--show, none);
+    /* Establece el valor de visualización según la variable --show */
+ }
+
+ /* hero container*/
+
+ /* Define el contenedor principal del héroe */
+ .hero__container {
+    max-width: 800px;
+    /* Establece el ancho máximo del contenedor del héroe */
+    --padding-container: 0;
+    /* Variable personalizada para el relleno del contenedor */
+    display: grid;
+    /* Usa el sistema de rejilla para el diseño del contenedor */
+    grid-auto-rows: max-content;
+    /* Configura la altura automática de las filas según su contenido máximo */
+    align-content: center;
+    /* Centra el contenido en el eje vertical */
+    gap: 1em;
+    /* Establece el espacio entre las filas y columnas en una unidad relativa */
+    padding-bottom: 100px;
+    /* Añade un relleno en la parte inferior del contenedor */
+    text-align: center;
+    /* Centra el contenido de texto dentro del contenedor */
+ }
+
+ /* Estiliza el título del héroe */
+ .hero__title {
+    font-size: 3rem;
+    /* Establece el tamaño de la fuente del título */
+ }
+
+ /* Estiliza el párrafo del héroe */
+ .hero__paragraph {
+    margin-bottom: 20px;
+    /* Añade un margen en la parte inferior del párrafo */
+ }
+
+ /* Estiliza el botón de llamado a la acción (CTA) */
+ .cta {
+    display: inline-block;
+    /* Hace que el botón se comporte como un elemento en línea */
+    background-color: #2091f9;
+    /* Establece el color de fondo del botón */
+    justify-self: center;
+    /* Centra el botón horizontalmente dentro de su contenedor */
+    color: #fff;
+    /* Establece el color del texto del botón */
+    text-decoration: none;
+    /* Elimina la decoración de subrayado del texto */
+    padding: 13px 30px;
+    /* Añade relleno interno alrededor del texto del botón */
+    border-radius: 32px;
+    /* Establece el radio de borde para suavizar las esquinas del botón */
+ }
+
+ /*about */
+
+ /* Establece el texto centrado para la sección 'about' */
+ .about {
+    text-align: center;
+    /* Alinea el texto en el centro */
+ }
+
+ /* Estiliza los subtítulos de la sección 'about' */
+ .subtitle {
+    color: var(--color-title);
+    /* Establece el color del texto según una variable personalizada */
+    font-size: 2rem;
+    /* Establece el tamaño de la fuente del subtítulo */
+    margin-bottom: 25px;
+    /* Añade un margen en la parte inferior del subtítulo */
+ }
+
+ /* Estiliza el párrafo principal de la sección 'about' */
+ .about__paragraph {
+    line-height: 1.7;
+    /* Establece la altura de línea del párrafo */
+ }
+
+ /* Estiliza el contenedor principal de la sección 'about' */
+ .about__main {
+    padding-top: 80px;
+    /* Añade relleno en la parte superior del contenedor */
+    display: grid;
+    /* Utiliza el sistema de rejilla para el diseño del contenedor */
+    width: 90%;
+    /* Establece el ancho del contenedor al 90% */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    gap: 1em;
+    /* Establece el espacio entre las filas y columnas en una unidad relativa */
+    overflow: hidden;
+    /* Oculta cualquier contenido que exceda los límites del contenedor */
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    /* Establece las columnas de la rejilla con un tamaño mínimo de 260px y un máximo automático */
+ }
+
+ /* Estiliza el contenedor de iconos de la sección 'about' */
+ .about__icons {
+    display: grid;
+    /* Utiliza el sistema de rejilla para el diseño del contenedor de iconos */
+    gap: 1em;
+    /* Establece el espacio entre las filas y columnas en una unidad relativa */
+    justify-items: center;
+    /* Centra los elementos horizontalmente dentro del contenedor */
+    width: 260px;
+    /* Establece el ancho del contenedor de iconos a 260px */
+    overflow: hidden;
+    /* Oculta cualquier contenido que exceda los límites del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor de iconos horizontalmente */
+ }
+
+ /* Estiliza los iconos individuales de la sección 'about' */
+ .about__icon {
+    width: 40px;
+    /* Establece el ancho del icono a 40px */
+ }
+
+ /*kwonledge*/
+
+ /* Establece el color de fondo y la apariencia de gradiente para el contenedor de conocimientos */
+ .knowledge {
+    background-color: #e5e5f7;
+    /* Establece el color de fondo del contenedor de conocimientos */
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, rgb(244, 153, 7) 10px), repeating-linear-gradient(#fabe75e8, #eadfce);
+    /* Establece un gradiente de fondo utilizando una combinación de radiales y lineales */
+    overflow: hidden;
+    /* Oculta cualquier contenido que exceda los límites del contenedor */
+ }
+
+ /* Estiliza el contenedor de conocimientos */
+ .knowledge__container {
+    display: grid;
+    /* Utiliza el sistema de rejilla para el diseño del contenedor */
+    grid-template-columns: 1fr 1fr;
+    /* Establece las columnas de la rejilla en una fracción igual */
+    gap: 1em;
+    /* Establece el espacio entre las filas y columnas en una unidad relativa */
+    align-items: center;
+    /* Alinea los elementos en el centro verticalmente */
+ }
+
+ /* Estiliza la imagen dentro del contenedor de conocimientos */
+ .knowledge__picture {
+    max-width: 500px;
+    /* Establece el ancho máximo de la imagen en 500px */
+ }
+
+ /* Estiliza el párrafo de conocimientos */
+ .knowledge__paragraph {
+    line-height: 1.7;
+    /* Establece la altura de línea del párrafo de conocimientos */
+    margin-bottom: 15px;
+    /* Añade un margen en la parte inferior del párrafo de conocimientos */
+ }
+
+ /* Estiliza la imagen de conocimientos */
+ .knowledge__img {
+    width: 100%;
+    /* Establece el ancho de la imagen al 100% */
+    display: block;
+    /* Establece el elemento de imagen como de bloque */
+ }
+
+ /*Price*/
+
+ /* Alinea el texto al centro en la sección de precios */
+ .price {
+    text-align: center;
+ }
+
+ /* Estiliza la tabla de precios */
+ .price__table {
+    padding-top: 60px;
+    /* Añade un relleno en la parte superior de la tabla de precios */
+    display: flex;
+    /* Utiliza un diseño flexible para la tabla de precios */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en la flexbox */
+    gap: 2.5em;
+    /* Establece el espacio entre los elementos en la tabla de precios */
+    justify-content: space-evenly;
+    /* Alinea los elementos uniformemente en el espacio disponible */
+    align-items: center;
+    /* Alinea los elementos al centro verticalmente */
+ }
+
+ /* Estiliza el elemento de precio */
+ .price__element {
+    background-color: #e5e5f7;
+    /* Establece el color de fondo para el elemento de precio */
+    text-align: center;
+    /* Alinea el texto al centro dentro del elemento de precio */
+    border-radius: 10px;
+    /* Agrega un borde redondeado al elemento de precio */
+    width: 330px;
+    /* Establece el ancho del elemento de precio en 330px */
+    padding: 40px;
+    /* Añade relleno alrededor del contenido del elemento de precio */
+    --color-plan: #696871;
+    /* Definición de color personalizado para el plan */
+    --color-price: #1D293F;
+    /* Definición de color personalizado para el precio */
+    --bg-cta: #fff;
+    /* Definición de color de fondo personalizado para la llamada a la acción */
+    --color-cta: #5454D4;
+    /* Definición de color personalizado para el texto de la llamada a la acción */
+    --color-items: #696871;
+    /* Definición de color personalizado para los elementos */
+ }
+
+ /* Estiliza el mejor elemento de precio */
+ .price__element--best {
+    width: 370px;
+    /* Establece el ancho del mejor elemento de precio en 370px */
+    padding: 60px 40px;
+    /* Añade relleno alrededor del contenido del mejor elemento de precio */
+    background-color: rgb(244, 153, 7);
+    /* Establece el color de fondo para el mejor elemento de precio */
+    --color-plan: rgb(255 255 255 / 75%);
+    /* Definición de color personalizado para el plan en el mejor elemento de precio */
+    --color-price: #fff;
+    /* Definición de color personalizado para el precio en el mejor elemento de precio */
+    --bg-cta: #9F3919;
+    /* Definición de color de fondo personalizado para la llamada a la acción en el mejor elemento de precio */
+    --color-cta: #FFF;
+    /* Definición de color personalizado para el texto de la llamada a la acción en el mejor elemento de precio */
+    --color-items: #fff;
+    /* Definición de color personalizado para los elementos en el mejor elemento de precio */
+ }
+
+ /* Estiliza el nombre del precio */
+ .price__name {
+    color: var(--color-plan);
+    /* Establece el color del texto del nombre del precio */
+    margin-bottom: 15px;
+    /* Añade un margen en la parte inferior del nombre del precio */
+    font-weight: 300;
+    /* Establece el peso de la fuente del nombre del precio */
+ }
+
+ /* Estiliza el precio */
+ .price__price {
+    font-size: 2.5rem;
+    /* Establece el tamaño de la fuente del precio */
+    color: var(--color-price);
+    /* Establece el color del texto del precio */
+ }
+
+ /* Estiliza los elementos del precio */
+ .price__items {
+    margin-top: 35px;
+    /* Añade un margen en la parte superior de los elementos del precio */
+    display: grid;
+    /* Utiliza un diseño de rejilla para los elementos del precio */
+    gap: 1em;
+    /* Establece el espacio entre los elementos en los elementos de precio */
+    font-weight: 300;
+    /* Establece el peso de la fuente para los elementos del precio */
+    font-size: 1.2rem;
+    /* Establece el tamaño de la fuente para los elementos del precio */
+    margin-bottom: 50px;
+    /* Añade un margen en la parte inferior de los elementos del precio */
+    color: var(--color-items);
+    /* Establece el color del texto de los elementos del precio */
+ }
+
+ /* Estiliza la llamada a la acción del precio */
+ .price__cta {
+    display: block;
+    /* Establece la llamada a la acción del precio como bloque */
+    padding: 20px 0;
+    /* Añade relleno alrededor de la llamada a la acción del precio */
+    border-radius: 10px;
+    /* Agrega un borde redondeado a la llamada a la acción del precio */
+    text-decoration: none;
+    /* Elimina la decoración de texto para la llamada a la acción del precio */
+    background-color: var(--bg-cta);
+    /* Establece el color de fondo para la llamada a la acción del precio */
+    font-weight: 600;
+    /* Establece el peso de la fuente para la llamada a la acción del precio */
+    color: var(--color-cta);
+    /* Establece el color del texto para la llamada a la acción del precio */
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    /* Agrega una sombra alrededor de la llamada a la acción del precio */
+ }
+
+ /*Testimony*/
+
+ /* Establece el fondo del contenedor de testimonios */
+ /*.testimony {
+   background-image: radial-gradient(circle at center center, #fabe75e8, rgb(244, 153, 7)), repeating-radial-gradient(circle at center center, #fabe75e8, #eadfce, 10px, transparent 20px, transparent 10px);
+   background-blend-mode: multiply;
+}*/
+
+ .testimony {
+    position: relative;
+
+ }
+
+ #video1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ajusta el ancho según tu preferencia */
+    height: 500px;
+    /* Ajusta la altura según tu preferencia */
+    object-fit: cover;
+    /* Ajusta el tamaño del video para cubrir el contenedor */
+    z-index: -1;
+   
+ }
+
+ /* Establece la rejilla para el contenedor de testimonios */
+ .testimony__container {
+    display: grid;
+    /* Establece el contenedor de testimonios como una rejilla */
+    grid-template-columns: 50px 1fr 50px;
+    /* Establece las columnas de la rejilla para el contenedor de testimonios */
+    gap: 1em;
+    /* Agrega espacios entre los elementos del contenedor de testimonios */
+    align-items: center;
+    /* Alinea los elementos del contenedor de testimonios en el centro */
+ }
+
+ /* Estiliza el cuerpo de cada testimonio */
+ .testimony__body {
+    color: #fff;
+    display: grid;
+    /* Establece el cuerpo del testimonio como una rejilla */
+    grid-template-columns: 1fr max-content;
+    /* Establece las columnas de la rejilla para el cuerpo del testimonio */
+    justify-content: space-between;
+    /* Justifica los elementos del cuerpo del testimonio */
+    align-items: center;
+    /* Alinea los elementos del cuerpo del testimonio */
+    gap: 2em;
+    /* Agrega espacios entre los elementos del cuerpo del testimonio */
+    grid-column: 2/3;
+    /* Establece las columnas para el cuerpo del testimonio */
+    grid-row: 1/2;
+    /* Establece las filas para el cuerpo del testimonio */
+    opacity: 0;
+    /* Establece la opacidad del cuerpo del testimonio en 0 */
+    pointer-events: none;
+    /* Deshabilita los eventos del cursor para el cuerpo del testimonio */
+ }
+
+ /* Estiliza el cuerpo del testimonio mostrado */
+ .testimony__body--show {
+    pointer-events: unset;
+    /* Habilita los eventos del cursor para el cuerpo del testimonio mostrado */
+    opacity: 1;
+    /* Establece la opacidad del cuerpo del testimonio mostrado en 1 */
+    transition: opacity 1.5 ease-in-out;
+    /* Establece una transición suave para la opacidad del cuerpo del testimonio mostrado */
+ }
+
+ /* Estiliza la imagen del testimonio */
+ .testimony__img {
+    width: 250px;
+    /* Establece el ancho de la imagen del testimonio */
+    height: 250px;
+    /* Establece la altura de la imagen del testimonio */
+    border-radius: 50%;
+    /* Establece un borde redondeado para la imagen del testimonio */
+    object-fit: cover;
+    /* Ajusta la imagen del testimonio para que cubra la caja del contenedor */
+    object-position: 50% 30%;
+    /* Establece la posición de la imagen del testimonio */
+ }
+
+ /* Estiliza los textos del testimonio */
+ .testimony__texts {
+    max-width: 700px;
+    /* Establece el ancho máximo de los textos del testimonio */
+ }
+
+ /* Estiliza el curso del testimonio */
+ .testimony__course {
+    background-color: black;
+    /* Establece el color de fondo para el curso del testimonio */
+    color: #fff;
+    /* Establece el color del texto para el curso del testimonio */
+    display: inline-block;
+    /* Establece el curso del testimonio como un bloque en línea */
+    padding: 5px;
+    /* Agrega relleno alrededor del curso del testimonio */
+ }
+
+ /* Estiliza la flecha del testimonio */
+ .testimony__arrow {
+    width: 90%;
+    /* Establece el ancho de la flecha del testimonio */
+    cursor: pointer;
+    /* Establece un cursor de puntero para la flecha del testimonio */
+ }
+
+ /*Questions*/
+
+ /* Establece el texto alineado al centro para la sección de preguntas */
+ .questions {
+    text-align: center;
+ }
+
+ /* Establece la rejilla para el contenedor de preguntas */
+ .questions__container {
+    display: grid;
+    /* Establece el contenedor de preguntas como una rejilla */
+    gap: 2em;
+    /* Agrega espacios entre los elementos del contenedor de preguntas */
+    padding-top: 50px;
+    /* Agrega relleno en la parte superior del contenedor de preguntas */
+    padding-bottom: 100px;
+    /* Agrega relleno en la parte inferior del contenedor de preguntas */
+ }
+
+ /* Establece el relleno para las preguntas */
+ .questions__padding {
+    padding: 0;
+    /* Establece el relleno inicial para las preguntas en 0 */
+    transition: padding .3s;
+    /* Establece una transición suave para el relleno de las preguntas */
+    border: 1px solid rgb(244, 153, 7);
+    /* Establece un borde para las preguntas */
+    border-radius: 6px;
+    /* Establece un radio de borde para las preguntas */
+ }
+
+ /* Establece el relleno adicional para las preguntas */
+ .questions__padding--add {
+    padding-bottom: 30px;
+    /* Establece un relleno adicional en la parte inferior para las preguntas */
+ }
+
+ /* Establece el relleno para la respuesta de las preguntas */
+ .questions__answer {
+    padding: 0 30px 0;
+    /* Establece el relleno para la respuesta de las preguntas */
+    overflow: hidden;
+    /* Oculta el contenido que se desborda del contenedor de las respuestas de las preguntas */
+ }
+
+ /* Estiliza el título de las preguntas */
+ .questions__title {
+    text-align: left;
+    /* Establece el texto alineado a la izquierda para el título de las preguntas */
+    display: flex;
+    /* Establece el título de las preguntas como un elemento flexible */
+    font-size: 20px;
+    /* Establece el tamaño de fuente para el título de las preguntas */
+    padding: 30px 0 30px;
+    /* Establece el relleno para el título de las preguntas */
+    cursor: pointer;
+    /* Establece un cursor de puntero para el título de las preguntas */
+    color: var(--color-title);
+    /* Establece el color del texto para el título de las preguntas */
+    justify-content: space-between;
+    /* Justifica el contenido del título de las preguntas */
+ }
+
+ /* Estiliza la flecha para las preguntas */
+ .questions__arrow {
+    border-radius: 50%;
+    /* Establece un radio de borde para la flecha de las preguntas */
+    background-color: var(--color-title);
+    /* Establece el color de fondo para la flecha de las preguntas */
+    width: 25px;
+    /* Establece el ancho para la flecha de las preguntas */
+    height: 25px;
+    /* Establece la altura para la flecha de las preguntas */
+    display: flex;
+    /* Establece la flecha de las preguntas como un elemento flexible */
+    justify-content: center;
+    /* Justifica el contenido de la flecha de las preguntas */
+    align-items: center;
+    /* Alinea los elementos de la flecha de las preguntas */
+    align-self: flex-end;
+    /* Alinea la flecha de las preguntas en la parte inferior del contenedor */
+    margin-left: 10px;
+    /* Establece un margen a la izquierda para la flecha de las preguntas */
+    transition: transform .3s;
+    /* Establece una transición suave para la transformación de la flecha de las preguntas */
+ }
+
+ /* Estiliza la rotación de la flecha para las preguntas */
+ .questions__arrow--rotate {
+    transform: rotate(180deg);
+    /* Establece una rotación de 180 grados para la flecha de las preguntas */
+ }
+
+ /* Estiliza el texto mostrado para las preguntas */
+ .questions__show {
+
+    text-align: left;
+    /* Establece el texto alineado a la izquierda para el texto mostrado de las preguntas */
+    height: 0;
+    /* Establece la altura inicial del texto mostrado de las preguntas en 0 */
+    transition: height .3s;
+    /* Establece una transición suave para la altura del texto mostrado de las preguntas */
+ }
+
+ /* Estiliza la imagen para las preguntas */
+ .questions__img {
+    display: block;
+    /* Establece la imagen para las preguntas como un elemento en bloque */
+ }
+
+ /* Estiliza la copia para las preguntas */
+ .questions__copy {
+    width: 60%;
+    /* Establece el ancho para la copia de las preguntas */
+    margin: 0 auto;
+    /* Establece un margen automático para la copia de las preguntas */
+    margin-bottom: 30px;
+    /* Establece un margen inferior*/
+ }
+
+ /*footer*/
+
+ .footer {
+    position: relative;
+ }
+
+ #video2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ajusta el ancho según tu preferencia */
+    height: 700px;
+    /* Ajusta la altura según tu preferencia */
+    object-fit: cover;
+    /* Ajusta el tamaño del video para cubrir el contenedor */
+    z-index: -1;
+ }
+
+ .footer__title {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 30px;
+ }
+
+ .footer__title,
+ .footer__newsletter {
+    color: #FFF;
+
+ }
+
+ .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 60px;
+
+ }
+
+ .nav--footer {
+    padding-bottom: 20px;
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: row;
+    height: 100%;
+
+ }
+
+ .nav__link--footer {
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;
+ }
+
+ .footer__inputs {
+    margin-top: 10px;
+    display: flex;
+    overflow: hidden;
+
+ }
+
+ .footer__input {
+    background-color: #FFF;
+    height: 50px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+ }
+
+ .footer__submit {
+    margin-left: auto;
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #2091f9;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+
+ }
+
+ .footer__copy {
+    --padding-container: 30px;
+    text-align: center;
+    color: #fff;
+
+ }
+
+ .footer__copyright {
+    font-weight: 300;
+ }
+
+ .footer__icons {
+
+    margin-bottom: 10px;
+ }
+
+ .footer__img {
+    width: 30px;
+ }
+
+ /* medias queries*/
+
+ @media (max-width:800px) {
+    .nav__menu {
+       display: block;
+    }
+
+    .nav__link--menu {
+       position: fixed;
+       background-color: #000;
+       top: 0;
+       left: 0;
+       height: 100%;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       align-items: center;
+       z-index: 100;
+       opacity: 0;
+       pointer-events: none;
+       transition: .7s opacity;
+
+    }
+
+    .nav__link--show {
+       --show: block;
+       opacity: 1;
+       pointer-events: unset;
+
+    }
+
+    .nav__close {
+       position: absolute;
+       top: 30px;
+       right: 30px;
+       width: 30px;
+       cursor: pointer;
+    }
+
+    .hero__title {
+       font-size: 2.5rem;
+
+    }
+
+    .about__main {
+       gap: 2em;
+
+    }
+
+    .about__icons:last-of-type {
+       grid-column: 1/-1;
+    }
+
+
+
+    .knowledge__container {
+       grid-template-columns: 1fr;
+       grid-template-rows: max-content 1fr;
+       gap: 3em;
+       text-align: center;
+
+    }
+
+    .knowledge__picture {
+       grid-row: 1/2;
+       justify-self: center;
+    }
+
+    .testimony__container {
+       grid-template-columns: 30px 1fr 30px;
+    }
+
+    .testimony__body {
+       grid-template-columns: 1fr;
+       grid-template-rows: max-content max-content;
+       gap: 3em;
+       justify-items: center;
+
+    }
+
+
+    .testimony__img {
+       width: 200px;
+       height: 200px;
+
+    }
+
+    .questions__copy {
+       width: 100%;
+    }
+
+    .footer__container {
+       flex-wrap: wrap;
+
+    }
+
+    .nav--footer {
+       width: 100%;
+       justify-items: center;
+    }
+
+    .nav__link--footer {
+       width: 100%;
+       justify-content: space-evenly;
+       margin: 0;
+    }
+
+    .footer__form {
+       width: 100%;
+       justify-content: space-evenly;
+
+    }
+
+    .footer__input {
+       flex: 1;
+    }
+}
+ 
+@media (max-width:600px){
+   .hero__title{
+       font-size: 2rem;
+   }
+
+   .hero__paragraph{
+       font-size: 1rem;
+   }
+
+   .subtitle{
+       font-size: 1.8rem;
+   }
+
+   .price__element{
+       width: 90%;
+   }
+
+   .price__element--best{
+       width: 90%;
+       /* padding: 40px; */
+   }
+
+   .price__price{
+       font-size: 2rem;
+   }
+
+   .testimony{
+       --padding-container: 60px 0;
+   }
+
+   .testimony__container{
+       grid-template-columns: 28px 1fr 28px;
+       gap: .9em;
+   }
+
+   .testimony__arrow{
+       width: 100%;
+   }
+
+   .testimony__course{
+       margin-top: 15px;
+   }
+
+   .questions__title{
+       font-size: 1rem;
+   }
+
+   .footer__title{
+       justify-self: start;
+       margin-bottom: 15px;
+   }
+
+   .nav--footer{
+       padding-bottom: 60px;
+   }
+
+   .nav__link--footer{
+       justify-content: space-between;
+   }
+
+   .footer__inputs{
+       flex-wrap: wrap;
+   }
+
+   .footer__input{
+       flex-basis: 100%;
+       margin: 0;
+       margin-bottom: 16px;
+   }
+
+   .footer__submit{
+       margin-right: auto;
+       margin-left: auto;
+      
+
+       
+   }
+}
